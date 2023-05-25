@@ -5,12 +5,10 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5000;
-
-
 // connect the dataBase to the server  
 
 mongoose.connect(process.env.MONGOURL, {
-   dbName: 'ReactDb',
+   dbName: 'ReactDbe',
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
