@@ -1,0 +1,35 @@
+.cta{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 17px;
+    box-sizing: border-box;
+    gap: 15px;
+    .btn{
+            width: 150px;
+            height: 30px;
+            display: block;
+            border: 1px solid #f5f78c;
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            &:hover{
+                background-color: #282c34;
+            }
+            
+    }
+   
+    .btn-primary{
+        background-color: rgb(3, 20, 36);
+        color: #f5f78c;
+        border: 1px solid white;
+        &:hover{
+            background-color: rgb(5, 45, 82);
+        }
+    }
+  
+  
+}
