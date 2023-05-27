@@ -1,6 +1,7 @@
 import React from 'react';
 import './layout.scss';
 import Sidebar from '../SideBar/sidebar';
+import Navbar from '../Navbar/navbar'
 import Home from '../Home-page/home';
 import About from '../About/about';
 import { Outlet } from 'react-router-dom';
@@ -8,7 +9,7 @@ import { Outlet } from 'react-router-dom';
 const Layout=() => {
       return (
       <div className='MainLayout'>
-
+         <Navbar />
         <Sidebar />
          <div className='page'>
          <span className='tags top-tag-html'>&lt;html&gt;</span><br />

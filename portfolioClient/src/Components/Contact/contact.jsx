@@ -1,8 +1,31 @@
 import './contact.scss'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters/animate'
-import { useEffect, useState, React } from 'react'
+import { useEffect, useState, React, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 const Contact = () => {
+  const refForm = useRef()
+
+  const sendEmail = (e)=>{
+    e.preventDefault();
+    let parameter={
+        email_id: "1234",
+        message: "still testing my email, wait for a moment",
+        name: "Kenneth Kouete",
+        subject: "my Subject",
+        email: "kenneth.kouete@facsciences-uy1.com",
+      };
+    emailjs.sendForm("service_5657lib","template_zgd2184",refForm.current,"Ys7tkBnopHFrfEYry",parameter).then(
+        (res)=>{
+           alert('Message successfully sent  !'+res.status)
+           window.location.reload(false)
+        },
+        ()=>{
+           alert('Failed to submit the message, Try again')
+        }
+  );
+  }
+
   return (
     <>
       <div className="container contact-page">
@@ -19,8 +42,16 @@ const Contact = () => {
             or question, don't Hesitate to contact me using the form below.
           </p>
           <div className="contact-form">
-            <form>
+            <form ref={refForm} onSubmit={sendEmail}>
               <ul>
+                <li>
+                <input
+                    className="half"
+                    type="text"
+                    name="email_id"
+                    placeholder="email code, Optional"
+                  />
+                </li>
                 <li>
                   <input
                     className="half"

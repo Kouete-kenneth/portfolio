@@ -23,6 +23,7 @@ function App() {
               <Route index element={<Home_page />}/>
               <Route path="/About" element={<About />}/>
               <Route path="/Contact" element={<Contact />}/>
+              
             </Route>
          </Routes>
       </>
