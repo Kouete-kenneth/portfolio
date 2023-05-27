@@ -4,12 +4,16 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const VisitorRoute =require ("./routes/VisitorRoute");
 // Middlewares
 
     app.use(express.json);
     app.use(express.urlencoded({extended:false}));
     app.use(bodyParser.json);
 
+// Routes Middleware
+
+app.use("/ api/Visitors", VisitorRoute);
 //    Routes
 app.get("/",(req,res) =>{
   res.send("Home Page");
@@ -32,26 +36,7 @@ mongoose.connect(process.env.MONGOURL, {
 });
 
 /*const ReactAppSchema=new mongoose.Schema({
-    email:{
-        type: String,
-        required:true,
-        unique:true
-    },
-    subject:{
-        type: String,
-        required:true
-    },
-    name:{
-        type:String,
-        required:true
-    },
-    Date:{
-        type:String,
-        default:Date.now
-    },
-    message:{
-        type:String,
-        required:true
+   
     }
 });
 
