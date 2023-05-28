@@ -13,8 +13,9 @@ import Portfolio from './Components/Portfolio/portfolio'
 import Testimonial from './Components/Testimonial/testimonial'
 import Contact from './Components/Contact/contact'
 import Footer from './Components/Footer/footer'
+import Skills from './Components/Skills/skills'
 import Home_page from './Components/Home-page/home'
-import Sidebar from './Components/SideBar/sidebar'
+import Projects from './Components/Projects/project'
 function App() {
   return (
       <>
@@ -23,7 +24,11 @@ function App() {
               <Route index element={<Home_page />}/>
               <Route path="/About" element={<About />}/>
               <Route path="/Contact" element={<Contact />}/>
-              
+              <Route path="/Projects" element={<Projects />} />
+              <Route path="/Experience" element={<Experience />} />
+              <Route path="/Services" element={<Services />} />
+              <Route path="/Testimonial" element={<Testimonial />} />
+              <Route path="/Skills" element={<Skills />} />
             </Route>
          </Routes>
       </>

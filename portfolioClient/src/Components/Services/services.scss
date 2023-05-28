@@ -1,0 +1,39 @@
+.Services_main{
+    display: block;
+    height: 85%;
+    width: 90%;
+    border-radius: 15px;
+    margin-left: 6vw;
+    margin-top: 5vh;
+    background-image: url('../../Assets/images/logiciels-developpement-web-notion-de-programmation-resume-code-langue-et-programme-sur\(0\).jpg');
+    background-color: bisque;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+    .Services_sub{
+        display: block;
+        box-sizing: border-box;
+        height: 99%;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        right: 0;
+        text-align: center;
+        background-color: #022c43;
+        color: #ffd700;
+        opacity: 0.7;
+        gap:25px;
+        box-shadow: 0 0 23px lightgoldenrodyellow;
+        & :first-of-type{
+            font-size: 4rem;
+            opacity: 1;
+           
+            
+        }
+     
+    }
+
+   
+
+}

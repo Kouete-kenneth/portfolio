@@ -1,0 +1,112 @@
+.Projects_main{
+    width: 87%;
+    height: 83%;
+    padding-left: 8vw;
+    margin-left: 5vw;
+    margin-top: 4vh;
+    padding-top: 1vh;
+    display: flex;
+    gap: 30px;
+    box-sizing: border-box;
+
+    .Latest{
+        background-color: #0e1420;
+        width: 30vw;
+        height: 85vh;
+        opacity: 0.5;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        font-size: 2rem;
+        padding: 10px;
+        color: rgb(241, 227, 144);
+        box-shadow: 0 0 23px 0 lightgoldenrodyellow;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 10px;
+        min-width: 100px;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        h3{
+            color: #ffd700;
+        }
+    }
+    .completed{
+        border-radius: 10px;
+        position: relative;
+        display: block;
+        padding-left: 10px;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 85vh;
+        background-color: rgb(243, 243, 207);
+        background-image: url('../../Assets/images/what-is-a-web-developer.jpg');
+        background-size: contain;
+        font-size: 2.3rem;
+        text-align: center;
+        h1{
+            color: #ffd700;
+            opacity: 0.7;
+        }
+
+        .head{
+            width: 96%;
+            display: grid;
+            grid-row-gap: 10px;
+            grid-column-gap: 80px;
+            box-sizing: border-box;
+            grid-template-columns: repeat(2,25vw);
+            position: relative;
+            top: 0px;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'coolvetica';
+
+            padding: 15px;
+            overflow: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            div{
+                border-radius: 15px;
+                background-color:black;
+                opacity: 0.5;
+                border: 3px double #ffd700;
+                color: lightgoldenrodyellow;
+                align-content: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+        }
+        .foot{
+            width: 96%;
+            display: grid;
+            grid-row-gap: 10px;
+            box-sizing: border-box;
+            grid-template-columns: repeat(2,25vw);
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-between;
+            font-family: 'coolvetica';
+            padding: 15px;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            div{
+                border-radius: 10px;
+                background-color: #0e1420;
+                opacity: 0.5;
+                border: 3px double #ffd700;
+                color: lightgoldenrodyellow;
+                align-content: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+        }
+
+    }
+}

@@ -1,12 +1,13 @@
 .nav-bar{
     background-color: #181818;
     width: 30%;
-    height: 50px;
+    height: 30px;
     position: absolute;
-    top: 0;
+    top: 5px;
     z-index: 3;  
     min-width: 400px; 
-    right: 0;
+    right: 50%;
+    transform: translateX(50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +60,8 @@
                &::after{
                 content: 'Experience';
                 font-size: 30px;
-                transform: translateY(25px);
+                transform: translateY(35px) translateX(30px);
+                font-family: 'coolvetica';
                }
             }
 
@@ -68,17 +70,36 @@
             &::after{
                 content: 'Services' ;
                 font-size: 30px;
-                transform: translateY(25px);
-
+                transform: translateY(35px) translateX(30px);
+                font-family: 'coolvetica';
             }
         }
         a.Testimonials-link{
             &::after{
                 content: 'Testimonials' ;
                 font-size: 30px;
-                transform: translateY(25px);
+                transform: translateY(35px) translateX(30px);
+                font-family: 'coolvetica';
             }
         }
+        a.Skills-link{
+            &::after{
+                content: 'Skills' ;
+                font-size: 30px;
+                transform: translateY(35px) translateX(30px);
+                font-family: 'coolvetica';
+                letter-spacing: 8px;
+            }
+        }
+        a.Project-link{
+            &::after{
+                content: 'See_Projects' ;
+                font-size: 30px;
+                transform: translateY(35px) translateX(30px);
+                font-family: 'coolvetica';
+            }
+        }
+       
          a.active{
             svg{
                 color: #ffd700;

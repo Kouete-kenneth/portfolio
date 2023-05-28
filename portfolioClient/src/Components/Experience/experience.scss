@@ -1,0 +1,46 @@
+.Experience_main{
+    display: block;
+    height: 85%;
+    width: 90%;
+    margin-left: 6vw;
+    margin-top: 5vh;
+    background-image: url('../../Assets/images/achats-en-ligne-smartphone-transforme-en-boutique-internet-concept-de-marketing-mobile-et.jpg');
+    background-color: bisque;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+    .Experience_sub{
+        display: block;
+        box-sizing: border-box;
+        height: 99%;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        width: 55%;
+        right: 0;
+        background-color: rgb(3, 2, 27);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5px;
+        box-shadow: 0 0 23px lightgoldenrodyellow;
+        div{
+            width: 70%;
+            padding: 10px;
+            height: 47%;
+            position: relative;
+            text-align: center;
+            color: #ffd700;
+            box-shadow:0 0 23px #ffd700;
+            border-radius: 15px;
+            font-size: large;
+            p{
+                opacity: 0.7;
+            }
+        }
+    }
+
+   
+
+}

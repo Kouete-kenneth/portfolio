@@ -33,7 +33,7 @@ function  Animation() {
               isAdding=false;
               setTimeout(function(){
                  Animation()
-              }, 5000);
+              }, 20000);
               return;
           } else {
               index++;

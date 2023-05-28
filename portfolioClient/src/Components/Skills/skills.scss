@@ -1,0 +1,98 @@
+.Skills_main{
+    display: flex;
+    height: 85%;
+    width: 90%;
+    margin-left: 6vw;
+    margin-top: 5vh;
+    background-image: url('../../Assets/images/achats-en-ligne-smartphone-transforme-en-boutique-internet-concept-de-marketing-mobile-et.jpg');
+    background-color: bisque;
+    background-size: contain;
+    .Skills_sub{
+        box-sizing: border-box;
+        height: 99%;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        width: 45%;
+        right: 0;
+        background-color: #022c43;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5px;
+        box-shadow: 0 0 23px lightgoldenrodyellow;
+        div{
+            width: 70%;
+            padding: 10px;
+            height: 30%;
+            position: relative;
+            text-align: center;
+            color: #eee4ab;
+            box-shadow:0 0 23px #252002;
+            border-radius: 15px;
+            font-size: large;
+            p{
+                opacity: 0.7;
+            }
+        }
+        .Programming{
+            height: 65%;
+            .main_head{
+                font-size: 3rem;
+                font-weight: 900;
+            }
+            .sub_head{
+                font-size: 2rem;
+            }
+            span{
+                font-weight: 900;
+                font-size: 1.5rem;
+               
+            }
+            i{
+                font-weight: lighter;
+                font-size: 1.5rem;
+                color: #2b2502;
+            }
+            em{
+                font-weight: 400;
+                color: #f5ecb8;font-size: 1.5rem;
+            }
+        }
+    }
+
+    .SkillsSub{
+        box-sizing: border-box;
+        height: 99%;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        left: 0;
+        background-color: #022c43;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5px;
+        box-shadow: 0 0 23px lightgoldenrodyellow;
+        div{
+            width: 70%;
+            padding: 10px;
+            height: 47%;
+            position: relative;
+            text-align: center;
+            color: #ebe0a1;
+            box-shadow:0 0 23px #2c2602;
+            border-radius: 15px;
+            font-size: large;
+            p{
+                opacity: 0.7;
+            }
+        }
+    }
+
+   
+
+}
