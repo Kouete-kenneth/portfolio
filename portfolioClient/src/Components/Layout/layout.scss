@@ -63,7 +63,7 @@
        display: table-cell;
        max-width: 90%;
        h1{
-           font-size: 53px;
+           font-size: 1.5rem;
            font-family: 'Coolvetica';
            color: #ffd700;
            font-weight: 400;
@@ -84,7 +84,7 @@
            &::after{
                content: '<h1>';
                font-family: 'La belle aurore';
-               font-size: 18px;
+               font-size: 0.5rem;
                position: absolute;
                margin-bottom: -10px;
                left: -10px;

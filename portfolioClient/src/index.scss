@@ -6,10 +6,13 @@
   margin: 0;
   color:#444 ;
   background-color: #022c43;
-  overflow:hidden ;
+  overflow:scroll ;
   display: block;
   font:300 11px/1.4 'Helvetica Neue','sans-serif'; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body::-webkit-scrollbar{
+   display: none;
+ }
 

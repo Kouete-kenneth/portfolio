@@ -1,0 +1,117 @@
+
+.comment_main{
+    width: 90%;
+    height: 100%;
+    overflow: scroll;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    .comments {
+        width: 90%;
+        margin-top: 5rem;
+        margin-left: 20rem;
+        color: #d0f5d1;
+        gap: 10px;
+        
+      
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+      
+        .comments__list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+      
+        .comments__item {
+          margin-bottom: 2rem;
+          display: flex;
+          align-items: flex-start;
+        }
+      
+        .comments__profile-picture {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          margin-right: 1rem;
+        }
+      
+        .comments__profile-info {
+          display: flex;
+          flex-direction: column;
+        }
+      
+        .comments__profile-name {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin: 0;
+        }
+      
+        .comments__profile-role {
+          font-size: 1rem;
+          margin: 0;
+        }
+        .space{
+          width: 100vw;
+          height: 5vh;
+        }
+        .comments__message {
+          margin: 0;
+          background-color: #0d2f41;      
+          max-width: 90%;
+          max-height: 300px;
+          font-family: 'coolvetica';
+          font-size: 1.5em;
+          overflow: scroll;
+          letter-spacing: 2px;
+        }
+        .comments__message::-webkit-scrollbar{
+          display: none;
+        }
+        .comments__form{
+          margin-top: 2rem;
+      
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+          }
+      
+          .comments__form-group {
+            margin-bottom: 1rem;
+      
+            label {
+              display: block;
+              margin-bottom: 0.5rem;
+              font-weight: bold;
+            }
+      
+            input[type='text'],
+            textarea {
+              width: 50%;
+              height: 5em;
+              padding: 0.5rem;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              font-size: 1rem;
+              margin-top: 0.25rem;
+            }
+          }
+      
+          button[type='submit'] {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+      
+            &:hover {
+              background-color: #2a382a;
+            }
+          }
+        }
+    }
+}
