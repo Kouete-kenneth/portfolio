@@ -1,11 +1,41 @@
+.sidebtn{
+    background-color: transparent;
+    color:#ffd700;
+    border: none;
+    outline: none;
+    visibility: visible;
+    z-index: 4;
+    opacity: 1;
+   
+    margin: 0px;
+    &.openbtn::before{
+        content: 'Close ';
+    }
+    &.closebtn::before{
+        content: 'Open ';
+    }
+}
 .side-bar{
     background-color: #181818;
     width: 60px;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 2.3rem;
     z-index: 3;  
     min-height: 500px; 
+    transition:all 1s ease-in-out;
+    &.bar-open{
+        visibility: visible;
+        opacity: 1;
+    }
+    &.bar-close{
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+
+
+
     .logo{
         display: block;
         padding: 8px 0;

@@ -18,6 +18,10 @@
     left: 120px;
     font-size: 20px;
     font-family:'La Belle Aurore';
+    @media screen and (max-width: 767px) {
+            content: '';
+            opacity: 0;
+    }
  }
  .bottom-tag-html{
     margin-left: -20px;
@@ -26,6 +30,8 @@
     margin-left: -20px;
     top: 0px;
  }
+
+
 
  .container{
    width: 95%;

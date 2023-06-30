@@ -1,29 +1,43 @@
-.nav-bar{
-    background-color: #181818;
-    width: 30%;
-    height: 30px;
+.navbtn{
+    cursor: pointer;
     position: absolute;
+    right: 20px;
     top: 5px;
-    z-index: 3;  
-    min-width: 400px; 
-    right: 50%;
-    transform: translateX(50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    nav{
-        display: inline-flex;
-        gap: 10px;
-        width: 50%;
+    background: transparent;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+    @media screen and (max-width: 767px) {
+        visibility:visible;
+        opacity: 1;
+        color:#ffd700;            
+                width: 5rem;
+}
+}
+
+    .nav-bar{
+        background-color: #181818;
+        width: 30%;
+        height: 30px;
         position: absolute;
+        top: 20px;
+        z-index: 3;  
         right: 50%;
-        transform: translate(50%);
+        transform: translateX(50%);
+        display: flex;
+        align-items: center;
+        border-radius: 30px;
+           display: flex;
+           justify-content: space-evenly;
 
-
+        div{
+            width: 5%;
+        }
 
         a{
-            font-size: 22px;
+            font-size: 2rem;
             color: #505075;
             display: flex;
             width: 50px;
@@ -45,7 +59,7 @@
             }
             &:after{
                 content: '';
-                font-size: 9px;
+                font-size: 0.5rem;
                 letter-spacing: 2px;
                 position: absolute;
                 bottom: 0;
@@ -59,7 +73,7 @@
             &:first-child{
                &::after{
                 content: 'Experience';
-                font-size: 30px;
+                font-size: 2rem;
                 transform: translateY(35px) translateX(30px);
                 font-family: 'coolvetica';
                }
@@ -69,7 +83,7 @@
         a.Services-link{
             &::after{
                 content: 'Services' ;
-                font-size: 30px;
+                font-size: 2rem;
                 transform: translateY(35px) translateX(30px);
                 font-family: 'coolvetica';
             }
@@ -77,7 +91,7 @@
         a.Testimonials-link{
             &::after{
                 content: 'Testimonials' ;
-                font-size: 30px;
+                font-size: 2rem;
                 transform: translateY(35px) translateX(30px);
                 font-family: 'coolvetica';
             }
@@ -85,7 +99,7 @@
         a.Skills-link{
             &::after{
                 content: 'Skills' ;
-                font-size: 30px;
+                font-size: 2rem;
                 transform: translateY(35px) translateX(30px);
                 font-family: 'coolvetica';
                 letter-spacing: 8px;
@@ -94,7 +108,7 @@
         a.Project-link{
             &::after{
                 content: 'See_Projects' ;
-                font-size: 30px;
+                font-size: 2rem;
                 transform: translateY(35px) translateX(30px);
                 font-family: 'coolvetica';
             }
@@ -105,6 +119,57 @@
                 color: #ffd700;
             }
          }
+         
+         @media screen and (max-width: 767px) {
+            // Styles for the navigation menu when the screen size is small
+            flex-direction: column;
+            position: absolute;
+            top: 25px;
+            right: 2rem;
+            width: 4rem;
+            background-color: #f5f5f5;
+            padding: 1rem;
+            transition: transform 0.3s ease-in-out;
+            height: 90%;
+            border-radius:0;
+            visibility: hidden;
+  
+            &.nav-open {
+              transform: translateX(-50%);
+              background-color: #181818;
+              visibility: visible;
+            }
+      
+            a {
+              // Styles for the navigation links in small screens
+              margin-bottom: 0.5rem;
+      
+              // Add additional styles for the navigation links as needed
+            }
+           
+            
+         
+          }
+     
     }
-}
+
+
+
+// @media only screen and (max-width:1024px){
+//     .nav-bar{
+//         .navbtn{
+//             visibility: visible;
+//             opacity: 1;
+//         }
+//         nav{
+//             position: fixed;
+//             top: 0;
+//             transition: 1s;
+//         }
+//         .PortfolioNav{
+//             transform: none;
+//         }
+//     }
+    
+// }
 

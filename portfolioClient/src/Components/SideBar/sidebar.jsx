@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './sidebar.scss'
 import { Link, NavLink } from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faEnvelope, faHome, faUser} from '@fortawesome/free-solid-svg-icons'
+import {faArrowAltCircleLeft, faArrowAltCircleRight, faBars, faEnvelope, faHome, faTimes, faUser} from '@fortawesome/free-solid-svg-icons'
 import {faFacebook, faGithub, faGoogle, faInstagram, faLinkedin, faSkype, faYoutube} from '@fortawesome/free-brands-svg-icons'
 
 import LogoS from '../../Assets/images/my_logo11-02.svg'
 import LogoSubtitle from '../../Assets/images/my_logo11-04.svg'
 const Sidebar = () =>{
-    return(<div className='side-bar'>
+    const [isSideBarOpen, setisSideBarOpen] = useState(true);
+
+  const showNavbar = () => {
+    setisSideBarOpen(!isSideBarOpen);
+  };
+    return(
+        <>
+             <button onClick={showNavbar} className={isSideBarOpen ? 'sidebtn openbtn' : 'closebtn sidebtn'}>
+                 <FontAwesomeIcon icon={isSideBarOpen? faArrowAltCircleLeft:faArrowAltCircleRight} />
+            </button>
+            <div className={isSideBarOpen ? 'side-bar bar-open' : 'side-bar bar-close'}>
+        
         <Link className="logo" to="/">
             <img src={LogoS} alt="My Logo" />
             <img className='sub-logo' src={LogoSubtitle} alt="Kenneth" />
@@ -24,7 +35,9 @@ const Sidebar = () =>{
                 <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e'/>
             </NavLink>
         </nav>
+           
         <ul>
+            
             <li>
                 <a href="https://www.linkedin.com/in/kouete-kenneth-737472200" target='_blank' rel='noreferer'>
                     <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e'/>
@@ -62,7 +75,9 @@ const Sidebar = () =>{
             </li>
             
         </ul>
-    </div>);
+    </div>
+        </>
+    );
 }
 
 export default Sidebar
