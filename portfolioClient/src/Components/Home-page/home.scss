@@ -1,166 +1,232 @@
-
-.scroll__down{
-    position: absolute;
-    right: 2rem;
-    bottom: 0px;
-    transform: rotate(-60deg,25deg,30deg);
-    font-weight: 300;
-    font-weight: 0.9rem;
-    box-sizing: border-box;
-}
-
 .home-page{
-    font-size: 15px;
+    box-sizing: border-box;
+       width: 100vw;
+       height: 85vh;
+       display: flex;
+       padding: 5rem;
+       gap: 5rem;
+       column-count: 2;
+     
     .text-zone{
-        position: absolute;
-        left: 15%;
-        top: 50%;
-        width: 40%;
-        max-height: 90%;
-        transform: translateY(-50%);
-    }
-    .mylogo{
-        background-image: url(../../Assets/images/Background2.jpg);
-        background-size: contain;
-        position: absolute;
-        right: 3%;
-        top: 50%;
-        width: 40%;
-        height: 67%;
-        bottom: 12%;
-        max-height: 90%;
-        transform: translateY(-50%);
+        font-size: 1.2rem;
         display: flex;
-        overflow: hidden;
-        box-sizing: border-box;
-        border-radius: 16px;
-        box-shadow: 0 0 20px 0 #ffd700;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        div{
-            background-color: #362504;
-            width: 60%;
-            border-radius: 20px;
-            height: 60%;
-            padding: 5px;
-            
-            box-shadow: 0 0 20px 0 #add8e6;
-            animation: logoAnime 30s infinite forwards;
-            transform-style: preserve-3d;
-            @keyframes logoAnime {
-                from,
-                to{
-                    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-           
-               }
-               20%{
-                   transform: translateX(-100px);
-               }
-               50%{
-                   transform: rotateX(180deg)  rotateX(-180deg) translateX(100px) translateY(-90px);
-               }
-               60%{
-                    transform: rotateX(-180deg);
-               }
-               70%{
-                transform: rotateX(760deg);
-               }
-           
-               80%{
-                transform: rotateY(-900deg) translateY(50px) translateX(50px);
-               }
-               90%{
-                  transform:rotateY(180deg) rotateZ(180deg) rotateX(1720deg); 
-               }
-          
-            } 
+        width: 45vw;
+        height: 78vh;
+        overflow: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+          }
+        
+        h1{
+            color: white;
+            height: 90%;
+            width: 90%;
+            font-size: 2.5rem;
+            font-family:'Coolvetica';
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &::before{
+                content: '';    
+            }
+            &::after{
+                content: '';
+            }
             img{
-                width: 100%;
-                height: 100%;
-                box-shadow: 0 0 20px rgb(15, 110, 27);
+                width: 22rem;
+                height: auto;
+                border-radius: 14%;
+                box-shadow:0 4px 4px 4px grey;   
+            }
+        }
+        .impress, .GetSolution{
+            color: rgb(165, 165, 189);
+            display: block;
+            height: 2.7rem;
+            box-sizing: border-box;
+            border: 0.5px solid darkkhaki;
+            width: 30rem;
+            overflow: hidden;
+            font-style: 'Helvetica Neue';
+            opacity: 0.8;
+            animation: myspan 10s infinite ease-out backwards;
+            border-radius: 5px;
+            padding: 4px;
+            letter-spacing: 2px;
+            font-family: 'Coolvetica';
+            box-shadow: 0 0 30px rgb(159, 150, 241);   
+            min-height: 25px;
+        }
+        @keyframes myspan {
+            from{
+                opacity: 0.8;
+                padding-left: 0%;
+                color: #bdb692;
+            }
+            to{
+                opacity: 1;
+                padding-left: 300px;
+                color: #ffd700;
             }
         }
     }
-    .impress, .GetSolution{
-        color: rgb(165, 165, 189);
-        display: block;
-        height: 25px;
-        box-sizing: border-box;
-        border: 0.5px solid darkkhaki;
-        width: 300px;
-        overflow: hidden;
-        font-style: 'Helvetica Neue';
-        opacity: 0.8;
-        animation: myspan 10s infinite ease-out backwards;
-        border-radius: 5px;
-        padding: 4px;
-        letter-spacing: 2px;
-        font-family: 'Coolvetica';
-        box-shadow: 0 0 30px rgb(159, 150, 241);
+    .logozone{
+        width: 45vw;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .mylogo{
+            background-image: url(../../Assets/images/Background2.jpg);
+            background-size: contain;
+            width: 75%;
+            height: 70%;
+            max-height: 90%;
+            display: flex;
+            overflow: hidden;
+            box-sizing: border-box;
+            border-radius: 16px;
+            box-shadow: 0 0 20px 0 #ffd700;
+            justify-content: center;
+            align-items: center;
+            div{
+                background-color: #362504;
+                width: 70%;
+                border-radius: 20px;
+                height: 60%;
+                padding: 5px;
+                box-shadow: 0 0 20px 0 #add8e6;
+                animation: logoAnime 30s infinite forwards;
+                transform-style: preserve-3d;
+                @keyframes logoAnime {
+                    from,
+                    to{
+                        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+               
+                   }
+                   20%{
+                       transform: translateX(-100px);
+                   }
+                   50%{
+                       transform: rotateX(180deg)  rotateX(-180deg) translateX(100px) translateY(-90px);
+                   }
+                   60%{
+                        transform: rotateX(-180deg);
+                   }
+                   70%{
+                    transform: rotateX(760deg);
+                   }
+               
+                   80%{
+                    transform: rotateY(-900deg) translateY(50px) translateX(50px);
+                   }
+                   90%{
+                      transform:rotateY(180deg) rotateZ(180deg) rotateX(1720deg); 
+                   }
+              
+                } 
+                img{
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0 0 20px rgb(15, 110, 27);
+                }
+            }
+            
+            .scroll__down{
+                position: absolute;
+                right: 2rem;
+                bottom: 0px;
+                transform: rotate(-60deg,25deg,30deg);
+                font-weight: 300;
+                font-weight: 0.9rem;
+                box-sizing: border-box;
+            }
+            @media screen and (max-width: 767px) {
+                width: 20rem;
+                height: 20rem;
+                .text-zone{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;  
+                }
+                div{
+                    background-color: #362504;
+                    width: 80%;
+                    height: 80%;
+                    animation: logoAnime 30s infinite forwards;
+                    transform-style: preserve-3d;
+                    @keyframes logoAnime {
+                        from,
+                        to{
+                            transform: translate(100px);
+                       }
+                       20%{
+                           transform: translateX(-100px);
+                       }
+                       50%{
+                           transform: translateX(100px) translateY(-90px);
+                       }
+                       60%{
+                            transform: translateX(-50px);
+                       }
+                       70%{
+                        transform: translateY(-50px);
+                       }
+                   
+                       80%{
+                        transform: translateY(50px) translateX(50px);
+                       }
+                       90%{
+                          transform:rotateY(180deg) rotateZ(180deg) rotateX(1720deg); 
+                       }
+                  
+                    } 
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: 0 0 20px rgb(15, 110, 27);
+                    }
+                }
+            }
+    
+        }    
+    } 
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        width: 80vw;
+        padding: 5px;
+        position: relative;
+        
+        .text-zone{
+            width: 100%;
+            height: fit-content;
+            .impress, .GetSolution{
+                height: 2.5rem;
+            }
+            h1{
+                width: 80%;
+                text-align: center;
+                height: fit-content;
+                img{
+                    width: 70%;
+                }
+            }
+        }
+        .logozone{
+            position: relative;
+            top: 5;
+            width: 100%;
+            height: 70vh;
+            .mylogo{
+                width: 85%;
+                height: 85%;
+            }
+
+        }
         
     }
-    @keyframes myspan {
-        from{
-            opacity: 0.8;
-            padding-left: 0%;
-            color: #bdb692;
-        }
-        to{
-            opacity: 1;
-            padding-left: 300px;
-            color: #ffd700;
-        }
-    }
-    h1{
-        color: white;
-        font-size: 30px;
-        font-family:'Coolvetica';
-        font-weight: 400;
-        &::before{
-            content: '<h1>';
-            position: absolute;
-            font-family: 'la belle Aurore';
-            color: #ffd700;
-            opacity: 0.6;
-            margin-top: -40px;
-            top: 10px;
-            left: -50px;
-        }
-        &::after{
-            content: '<h1>';
-            position: absolute;
-            font-family: 'la belle Aurore';
-            color: #ffd700;
-            opacity: 0.6;
-            bottom: 10px;
-            left: -50px;
-            margin-bottom: -40px;
-            animation: fadeIn 1s 1.7s backwards;
-        }
-        img{
-            width: 150px;
-            height: auto;
-            border-radius: 50%;
-        }
-        span{
-            height: 40px;
-            display: block;
-            color: #bdb692;
-        }
-    }
 }
-
-
-
-/*
-
-        <blockquote>
-          <div>
-            Based in Cameroon, i'm a full stack developper passionate about{' '}
-            <br /> building Accessible, fast and responsive web-based and hybrid
-            Applications
-            <footer>"Your satisfaction is my Priority !!!!!"</footer>
-          </div>
-        </blockquote>
-
-*/

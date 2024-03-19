@@ -9,7 +9,6 @@
     bottom: auto;
     top: 20px;
  }
-
  .tags{
     color: #ffd700;
     opacity: 0.6;
@@ -17,14 +16,21 @@
     bottom:0;
     left: 120px;
     font-size: 20px;
+    z-index: 0;
     font-family:'La Belle Aurore';
     @media screen and (max-width: 767px) {
             content: '';
             opacity: 0;
+            visibility: hidden;
     }
  }
+ .bottom-tags{
+   top: auto;
+   bottom: 20px;
+ }
  .bottom-tag-html{
-    margin-left: -20px;
+   margin-left: -20px;
+   bottom: 0px;
  }
  .top-tag-html{
     margin-left: -20px;
@@ -41,12 +47,18 @@
    min-height: 566px;
    position: absolute;
    opacity: 0;/*because we will be implementing fading*/
-   top: 7.5%;
+   top: 7%;
    margin: 0 auto;
-   z-index: 1 ;
+   z-index: 0 ;
    transform-style: preserve-3d;/*children of the container should be placed in the 3D space not 2D*/
     animation:fadIn 10s infinite forwards;
     animation-delay:1s ;
+    @media screen and (max-width: 767px) {
+      overflow: scroll;
+      &::-webkit-scrollbar{
+         display: none;
+       }
+    }
     
  }
  @keyframes fadIn{
@@ -66,10 +78,11 @@
        transform: translateY(-50%);
        width: 40%;
        vertical-align: middle;
+       text-align: center;
        display: table-cell;
        max-width: 90%;
        h1{
-           font-size: 1.5rem;
+           font-size: 5rem;
            font-family: 'Coolvetica';
            color: #ffd700;
            font-weight: 400;
@@ -80,21 +93,21 @@
            &::before{
                content: '<h1>';
                font-family: 'La belle aurore';
-               font-size: 18px;
+               font-size: 3rem;
                position: absolute;
                margin-top: -10px;
                left: -10px;
-               opacity: 0.8;
+               opacity: 0.5;
                line-height: 18px;
            }
            &::after{
                content: '<h1>';
                font-family: 'La belle aurore';
-               font-size: 0.5rem;
+               font-size: 3rem;
                position: absolute;
                margin-bottom: -10px;
                left: -10px;
-               opacity: 0.8;
+               opacity: 0.5;
                line-height: 18px;
                bottom: -20px;
            }

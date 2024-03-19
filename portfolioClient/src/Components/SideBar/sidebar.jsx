@@ -18,7 +18,7 @@ const Sidebar = () =>{
              <button onClick={showNavbar} className={isSideBarOpen ? 'sidebtn openbtn' : 'closebtn sidebtn'}>
                  <FontAwesomeIcon icon={isSideBarOpen? faArrowAltCircleLeft:faArrowAltCircleRight} />
             </button>
-            <div className={isSideBarOpen ? 'side-bar bar-open' : 'side-bar bar-close'}>
+            <div className={isSideBarOpen ? 'bar-open side-bar' : 'bar-close side-bar'}>
         
         <Link className="logo" to="/">
             <img src={LogoS} alt="My Logo" />
